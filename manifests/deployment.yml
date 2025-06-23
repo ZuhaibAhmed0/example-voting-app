@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: zuhaibahmedexamplevotingapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zuhaibahmedexamplevotingapp
+  template:
+    metadata:
+      labels:
+        app: zuhaibahmedexamplevotingapp 
+    spec:
+      containers:
+        - name: zuhaibahmedexamplevotingapp 
+          image: vottingapp.azurecr.io/zuhaibahmedexamplevotingapp
+          ports:
+          - containerPort: 80
